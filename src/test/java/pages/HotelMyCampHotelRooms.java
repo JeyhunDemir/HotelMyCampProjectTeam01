@@ -1,5 +1,6 @@
 package pages;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -52,8 +53,8 @@ public class HotelMyCampHotelRooms {
     @FindBy(xpath = "//select[@id='IDHotel']")
     public WebElement hotelDropDownElementi;
 
-    @FindBy(xpath = "(//button[@class='btn green'])[1]")
-    public WebElement saveButonuWebElementi;
+    @FindBy(xpath = "//button[text()='Save']")
+    public WebElement saveButonuWebElementi1;
 
     @FindBy(id = "btnDelete")
     public WebElement deleteButonuWebElementi;
@@ -67,7 +68,7 @@ public class HotelMyCampHotelRooms {
     @FindBy(xpath = "//input[@id='Name']")
     public WebElement nameElementi;
 
-    @FindBy(xpath = "//input[@id='Locations']")
+    @FindBy(xpath = "//input[@id='Location']")
     public WebElement locationElementi;
 
     @FindBy(xpath = "//input[@id='Price']")
@@ -112,6 +113,16 @@ public class HotelMyCampHotelRooms {
       @FindBy(xpath = "//textarea[@id='txtBarcode']")
       public  WebElement valuePropertiesElementi;
 
+      @FindBy(xpath = "//button[.='OK']")
+       public WebElement OKButonElementi;
+      @FindBy(xpath = "//div[text()='HotelRoom was inserted successfully']")
+ public WebElement successfullElementi;
+      @FindBy(xpath = "//input[@name='Code']")
+ public WebElement code2Elementi;
+      @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+ public WebElement search2Elementi;
+public  Faker faker = new Faker();
+ public String idstring=faker.idNumber().invalid();
 
 
 }
